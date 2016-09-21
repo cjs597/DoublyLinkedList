@@ -9,15 +9,18 @@ private:
 	int element;
 	Node * next;
 public:
-	Node(int = 0) :prev(NULL), element(0), next(NULL)
-	{}
+	Node(Node * = 0, int = 0, Node * = 0);
 };
+
+Node::Node(Node * n1, int e, Node * n2) : prev(n1), element(e), next(n2) {}
+
 
 class DoubleList {
 private:
-	Node * head;
-	Node * tail;
+	Node * list_head;
+	Node * list_tail;
 public:
+	DoubleList();
 	void find_head();
 	void find_tail();
 	void insert_before_head(int);
@@ -31,3 +34,30 @@ public:
 	void next();
 	void previous();
 };
+
+DoubleList::DoubleList() :list_head(0), list_tail(0) {}
+
+void DoubleList::find_head()
+{}
+void DoubleList::find_tail()
+{}
+void DoubleList::insert_before_head(int e)
+{}
+void DoubleList::insert_before_tail(int e)
+{}
+void DoubleList::insert_after_head(int e)
+{}
+void DoubleList::insert_after_tail(int e)
+{}
+void DoubleList::replace_head(int e)
+{}
+void DoubleList::replace_tail(int e)
+{}
+void DoubleList::erase_head()
+{}
+void DoubleList::erase_tail()
+{}
+void DoubleList::next()
+{}
+void DoubleList::previous()
+{}
