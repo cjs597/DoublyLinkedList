@@ -8,7 +8,7 @@ private:
 	int element;
 	Node * next;
 public:
-	Node(Node * = 0, int = 0, Node * = 0);
+	Node(int = 0);
 };
 
 class DoubleList {
@@ -29,4 +29,6 @@ public:
 	void erase_tail();
 	void next();
 	void previous();
+	bool empty();
+	void init(int);
 };
